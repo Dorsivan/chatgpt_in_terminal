@@ -89,9 +89,12 @@ def main() -> int:
             },
             {
                 "role": "user",
-                "cotent": prompt
+                "content": [
+                    {"type": "input_text", "text": prompt}
+                ]
             }
         ],
+        # input=prompt,
         stream=True,
     )
 
